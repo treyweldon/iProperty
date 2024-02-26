@@ -1,60 +1,39 @@
-const Property = require('../models/property');
+const Property = require("../models/property");
 
 module.exports = {
-    index,
-    show,
-    new: newProperty,
-    create,
-    delete: deleteProperty,
-    update,
-  };
-  
-async function index(req, res){
-    const properties = await Property.find({});
-    res.render('properties/index', { 
-      properties,
-      title: "All Properties 🏘️",});
-  };
+  index,
+  show,
+  create,
+  new: newProperty,
+};
+
+async function index(req, res) {
+  const properties = await Property.find({});
+  res.render("properties/index", { properties });
+}
 
 async function show(req, res) {
-    const properties = await Property.findById(req.params.id);
-    res.render('properties/show', { properties });
+  const property = await Property.findById(req.params.id);
+  if (!property) {
+    return res.status(404).json({ message: "Property not found" });
   }
+  res.render("properties/show", { property });
+}
 
-async function newProperty(req, res){
-    const properties = await Property.find({});
-    res.render('properties/new', {properties});
+async function newProperty(req, res) {
+  const properties = await Property.find({});
+  res.render("properties/new", { properties });
 }
 
 async function create(req, res) {
+  try {
     req.body.pets = !!req.body.pets;
     req.body.yard = !!req.body.yard;
     req.body.pool = !!req.body.pool;
-    try {
-      const properties = await Property.create(req.body);
-      res.redirect('/properties');  
-      res.render({properties})
-    } catch (err) {
-      console.log(err);
-      res.render('properties/new', { errorMsg: err.message });
-    }
+    const property = await Property.create(req.body);
+    res.redirect("/properties");
+  } catch (error) {
+    console.log(error);
+    res.render("properties/new", { errorMsg: error.message });
   }
-
-function update(req, res) {
-  req.body.done = !!req.body.done;
-  Property.update(req.params.id, req.body);
-  res.redirect(`/properties/${req.params.id}`);
-}
-
-function edit(req, res) {
-  const property = Property.getOne(req.params.id);
-  res.render("properties/edit", {
-    title: "Edit property",
-    property,
-  });
-}
-
-function deleteProperty(req, res) {
-  Property.deleteOne(req.params.id);
-  res.redirect("/properties");
 }

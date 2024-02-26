@@ -1,9 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-todosCtrl = require('../controllers/todos')
+const todosCtrl = require('../controllers/todos')
 
-router.post('/', todosCtrl.new);
-
+router.post('/:id', todosCtrl.create);
 
 module.exports = router;

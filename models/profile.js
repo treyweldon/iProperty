@@ -1,9 +1,9 @@
 //Test data
 const profiles = [
-  {id: 1001, name: 'Trey Weldon' },
-  {id: 1002, name: 'Jessica Mendez'},
-  {id: 1003, name: 'Ricardo Colon'},
-  {id: 1004, name: 'Victor Suarez'}
+  {id: 1001, name: 'Trey Weldon', bio:'This is a sample for the admin profile' },
+  {id: 1002, name: 'Jessica Mendez', bio:'This is a sample Bio for the admin profile' },
+  {id: 1003, name: 'Ricardo Colon', bio:'This is a sample Bio for the admin profile' },
+  {id: 1004, name: 'Victor Suarez', bio:'This is a sample Bio for the admin profile' }
   
 ];
 function create(name) {
