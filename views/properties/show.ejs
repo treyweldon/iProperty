@@ -1,0 +1,6 @@
+<%- include('../partials/header') -%>
+<h1><%= property.property %></h1>
+
+<h3>Complete: <%= property.ready ? 'Yes' : 'No' %></h3>
+<a href="/properties/<%= property.id %>/edit">Edit Property</a>
+<%- include('../partials/footer') -%>
