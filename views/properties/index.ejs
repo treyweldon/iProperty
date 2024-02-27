@@ -1,0 +1,19 @@
+<%- include('../partials/header') -%>
+
+<h3>All Properties as of <%= time %></h3>
+  <% properties.forEach(function(p) { %>
+  <li>
+    <a href="/properties/<%= p.id %>"><%= p.property %></a>
+    - <%= p.ready ? 'ready' : 'not ready' %>
+    <form
+    action="/properties/<%= p.id %>?_method=DELETE"
+    method="POST"
+    class="delete-form"
+    ><button type="submit">🗑️</button>
+  </form> | 
+</li>
+  <br>
+  <% }); %>
+  <br>
+<a href="/properties/new">Add a Property</a>
+<%- include('../partials/footer') -%>
