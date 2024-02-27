@@ -1,13 +1,24 @@
 <%- include('../partials/header') %>
 
 <h3>Address:</h3>
-<h3>Beds:</h3>
-<h3>Bath:</h3>
-<br><br>
+<h5><%= properties.address%></h5>
+<h5><%= properties.city%>, <%= properties.state%> <%= properties.zip%></h5>
+<h3>Bedrooms:</h3>
+<h5><%= properties.bedrooms%></h5>
+<h3>Bathrooms:</h3>
+<h5><%= properties.bathrooms%></h5>
+<h3>Pets:</h3>
+<h5><%= properties.pets ? 'Yes' : 'No' %></h5>
+<h3>Yard:</h3>
+<h5><%= properties.yard ? 'Yes' : 'No' %></h5>
+<h3>Pool:</h3>
+<h5><%= properties.pool ? 'Yes' : 'No' %></h5>
+<br>
 <h3>To Do:</h3>
-<h5>1, 2, 3
-    
-</h5>
-<a href="">Add TO DO</a>
+<ul>
+    <li>ex <%= properties.todo %></li>
+</ul>
+<h5></h5>
+<a href="/properties/<%= properties._id %>/todo/new">Add TO DO</a>
 
 <%-include('../partials/footer')%>
