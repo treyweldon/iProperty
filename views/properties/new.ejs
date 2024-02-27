@@ -1,27 +1,30 @@
 <%- include('../partials/header') %>
 
 <a href="/properties">back</a>
-<form action="/properties" method="GET">
+<form action="/properties" method="POST">
 <h3>Address</h3>
-<input type="text">
+<input type="text" name="address">
 <h3>City</h3>
-<input type="text">
+<input type="text" name="city">
 <h3>State</h3>
-<input type="text">
+<input type="text" name="state">
 <h3>Zip</h3>
-<input type="text">
-<h3>Beds</h3>
-<input type="text">
-<h3>Baths</h3>
-<input type="text">
+<input type="number" name="zip">
+<h3>Bedrooms</h3>
+<input type="number" name="bedrooms">
+<h3>Bathrooms</h3>
+<input type="number"  name="bathrooms">
 <h3>Pets</h3>
-<input type="checkbox">
+<input type="checkbox" name="pets">
 <h3>Yard</h3>
-<input type="checkbox">
+<input type="checkbox"  name="yard">
 <h3>Pool</h3>
-<input type="checkbox">
+<input type="checkbox" name="pool">
+<!-- <h3>Photos</h3>
+<input type="file" name="image" /> -->
 <br><br>
-<button>submit</button>
+<br><br>
+<button type="submit">Upload</button>
 </form>
 
 

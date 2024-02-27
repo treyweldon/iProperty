@@ -3,11 +3,12 @@ var router = express.Router();
 
 propertiesCtrl = require('../controllers/properties')
 
-/* GET users listing. */
 router.get('/', propertiesCtrl.index);
 
-router.get('/new', propertiesCtrl.create)
+router.get('/new', propertiesCtrl.new);
 
-router.get('/:id', propertiesCtrl.show)
+router.get('/:id', propertiesCtrl.show);
+
+router.post('/', propertiesCtrl.create);
 
 module.exports = router;

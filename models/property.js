@@ -39,16 +39,16 @@ const propertySchema = new Schema({
     },
     pets: {
         type: Boolean,
-        required: true
     },
     yard: {
         type: Boolean,
-        required: true
     },
     pool: {
         type: Boolean,
-        required: true
     },
+    // photos: {
+        
+    // },
     todo: [todoSchema]
 });
 
