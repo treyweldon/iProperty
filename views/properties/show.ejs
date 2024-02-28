@@ -16,17 +16,17 @@
 <br />
 <h3>To Do:</h3>
 <form action="/todos/<%= property._id %>" method="POST">
-  <select name="todoItem">
-    <% property.schema.path('todo').schema.path('todoItem').enumValues.forEach(function(todoItem) { %>
-    <option value="<%= todoItem %>"><%= todoItem %></option>
+  <select name="todoCategory">
+    <% property.schema.path('todo').schema.path('todoCategory').enumValues.forEach(function(todoCategory) { %>
+    <option value="<%= todoCategory %>"><%= todoCategory %></option>
     <% }); %>
   </select>
-  - <input type="text" name="todoItems" />
+  - <input type="text" name="todoItem" />
   <button type="submit">Submit</button>
 </form>
 <ul>
   <% property.todo.forEach(todo => { %>
-  <li><%= todo.todoItem %></li>
+  <li><%= todo.todoCategory %> - <%= todo.todoItem %></li>
   <% }); %>
 </ul>
 

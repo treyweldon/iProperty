@@ -2,10 +2,13 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const todoSchema = new Schema ({
-    todoItem: {
+    todoCategory: {
         type: String,
         enum: ["Landscaping", "Housekeep", "Inspection", "Maintenance", "Other"],
         required: true
+    },
+    todoItem: {
+        type: String,
     },
     completed: {
         type: Boolean

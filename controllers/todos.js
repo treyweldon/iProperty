@@ -5,8 +5,13 @@ module.exports = {
 };
 
 async function create(req, res) {
-  const property = await Property.findById(req.params.id);
-  property.todo.push({ todoItem: req.body.todoItem });
+  const propertyId = req.params.id;
+  const property = await Property.findById(propertyId);
+  const { todoCategory, todoItem } = req.body;
+  const newTodo = {
+    todoCategory,
+    todoItem,
+  };
+  property.todo.push(newTodo);
   await property.save();
-  res.redirect(`/properties/${req.params.id}`);
 }
