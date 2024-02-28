@@ -1,0 +1,10 @@
+<%- include('../partials/header') %>
+<form action="/properties/<%= property.id %>?_method=PUT" method="POST">
+  <input type="text" name="property" value="<%= property.property%>" autocomplete="off"/><br />
+  <label>
+    <input type="checkbox" name="ready" <%= property.ready ? 'checked' : ''%>>
+    Ready </label
+  ><br />
+  <button type="submit">Update Property Listing</button>
+</form>
+<%- include('../partials/footer') -%>
