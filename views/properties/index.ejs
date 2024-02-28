@@ -1,19 +1,21 @@
-<%- include('../partials/header') -%>
+<%- include('../partials/header') %>
 
-<h3>All Properties as of <%= time %></h3>
+<a href="/properties/new">Add Property</a>
+
+<br /><br />
+<tbody>
   <% properties.forEach(function(p) { %>
-  <li>
-    <a href="/properties/<%= p.id %>"><%= p.property %></a>
-    - <%= p.ready ? 'ready' : 'not ready' %>
-    <form
-    action="/properties/<%= p.id %>?_method=DELETE"
-    method="POST"
-    class="delete-form"
-    ><button type="submit">🗑️</button>
-  </form> | 
-</li>
-  <br>
+  <tr>
+    <td><h3><%= p.address %></h3></td>
+    <td>
+      <a href="/properties/<%= p._id %>"
+        ><img
+          src="https://cdn.iconscout.com/icon/premium/png-256-thumb/house-size-2480833-2082613.png"
+          alt="property"
+      /></a>
+    </td>
+  </tr>
   <% }); %>
-  <br>
-<a href="/properties/new">Add a Property</a>
-<%- include('../partials/footer') -%>
+</tbody>
+
+<%- include('../partials/footer') %>
