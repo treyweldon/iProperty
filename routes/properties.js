@@ -1,14 +1,10 @@
-var express = require('express');
-var router = express.Router();
+const express = require("express");
+const router = express.Router();
+const propertiesCtrl = require("../controllers/properties.js");
 
-propertiesCtrl = require('../controllers/properties')
-
-router.get('/', propertiesCtrl.index);
-
-router.get('/new', propertiesCtrl.new);
-
-router.get('/:id', propertiesCtrl.show);
-
-router.post('/', propertiesCtrl.create);
+router.get("/", propertiesCtrl.index);
+router.get("/new", propertiesCtrl.new);
+router.post("/", propertiesCtrl.create);
+router.get("/:id", propertiesCtrl.show);
 
 module.exports = router;
