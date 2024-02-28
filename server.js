@@ -13,7 +13,7 @@ require('./config/database');
 require('./config/passport');
 
 var indexRouter = require('./routes/index');
-var propertiesRouter = require('./routes/properties');
+var propertiesRouter = require('./routes/properties.js');
 var todosRouter = require('./routes/todos');
 
 var app = express();
