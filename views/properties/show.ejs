@@ -15,7 +15,7 @@
 <h5><%= properties.pool ? 'Yes' : 'No' %></h5>
 <br>
 <h3>To Do:</h3>
-<form action="/properties/<%=properties._id%>" method="POST">
+<form action="/properties/<%=properties._id%/todo/new>" method="POST">
 <input type="text" name="todoItem"><button type="submit">submit</button>
 </form>
 <ul>

@@ -51,5 +51,8 @@ const propertySchema = new Schema({
     todo: [todoSchema]
 });
 
-
-module.exports = mongoose.model('Property', propertySchema);
+const Property = mongoose.model('Property', propertySchema);
+const Todo = mongoose.model('Todo', todoSchema);
+module.exports = { 
+    Property, Todo 
+}
