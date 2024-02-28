@@ -1,7 +1,15 @@
-<%- include('./partials/header') -%>
+<%- include('./partials/header') %>
 
-  <body>
-    <h4>Track the details & Ready Status for each of your property listings</h4>
-  </body>
+<h1>LOGIN</h1>
+<br><br>
+<form action="/properties" method="GET">
+<h5>Email</h5>
+<input type="text" name="email" id="email">
+<br>
+<h5>Password</h5>
+<input type="text" name="password" id="password">
+<br><br>
+<button type="submit">Submit</button>
+</form>
 
-<%- include('./partials/footer') -%>
+<%- include('./partials/footer') %>
