@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const todoSchema = new Schema ({
     todoItem: {
         type: String,
+        enum: ["Landscaping", "Housekeep", "Inspection", "Maintenance", "Other"],
         required: true
     },
     completed: {
@@ -45,9 +46,6 @@ const propertySchema = new Schema({
     pool: {
         type: Boolean,
     },
-    // photos: {
-        
-    // },
     todo: [todoSchema]
 });
 
