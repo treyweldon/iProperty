@@ -14,4 +14,5 @@ async function create(req, res) {
   };
   property.todo.push(newTodo);
   await property.save();
+  res.redirect(`/properties/${req.params.id}`);
 }
