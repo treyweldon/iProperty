@@ -15,10 +15,13 @@
 <h5><%= properties.pool ? 'Yes' : 'No' %></h5>
 <br>
 <h3>To Do:</h3>
+<form action="/properties/<%=properties._id%>" method="POST">
+<input type="text" name="todoItem"><button type="submit">submit</button>
+</form>
 <ul>
     <li>ex <%= properties.todo %></li>
 </ul>
 <h5></h5>
-<a href="/properties/<%= properties._id %>/todo/new">Add TO DO</a>
+<!-- <a href="/properties/<%= properties._id %>/todo/new">Add TO DO</a> -->
 
 <%-include('../partials/footer')%>
