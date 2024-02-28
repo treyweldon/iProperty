@@ -1,0 +1,21 @@
+<%- include('../partials/header') %>
+
+<a href="/properties/new">Add Property</a>
+
+<br /><br />
+<tbody>
+  <% properties.forEach(function(p) { %>
+  <tr>
+    <td><h3><%= p.address %></h3></td>
+    <td>
+      <a href="/properties/<%= p._id %>"
+        ><img
+          src="https://cdn.iconscout.com/icon/premium/png-256-thumb/house-size-2480833-2082613.png"
+          alt="property"
+      /></a>
+    </td>
+  </tr>
+  <% }); %>
+</tbody>
+
+<%- include('../partials/footer') %>
