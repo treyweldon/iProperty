@@ -27,17 +27,19 @@
     <% }); %>
   </select>
   - <input type="text" name="todoItem" />
-  <button type="submit">Submit</button>
+  <button type="submit" class="submit">Submit</button>
 </form>
 <ul>
   <% property.todo.forEach(todo => { %>
-    <li><strong><%= todo.todoCategory %></strong> - <%= todo.todoItem %></li>
-    <form action="/properties/<%= property._id %>"  method="DELETE">
+    <li>
+      <strong><%= todo.todoCategory %></strong> - <%= todo.todoItem %>
+      <form action="/properties/<%= property._id %>"  method="DELETE">
     <button type="submit" id="delete">X</button>
     </form>
-    <form action="/todos/<%= property._id %>"  method="POST">
+    </li>
+    <!-- <form action="/todos/<%= property._id %>"  method="PUT">
     <button type="submit" id="update">update</button>
-    </form>
+    </form> -->
   <% }); %>
 </ul>
 

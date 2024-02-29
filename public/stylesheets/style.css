@@ -10,6 +10,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-repeat: no-repeat;
+  
 }
 
 body > nav {
@@ -19,6 +20,7 @@ body > nav {
   align-items: center;
   height: 50px;
   padding: 0 20px 0 30px;
+  box-shadow: #000000 5px 5px 5px;
 }
 
 .properties h3 {
@@ -28,7 +30,8 @@ body > nav {
 
 .propImg {
   filter: invert();
-  max-width: 200px;
+  max-width: 150px;
+  max-height: 120px;
   width: 20vw;
   height: 15vh;
 }
@@ -52,6 +55,11 @@ body > nav {
   max-height: 20vh;
   text-wrap: wrap;
   border-radius: 10px;
+  box-shadow: #040538 5px 5px 5px;
+}
+
+.property:hover {
+  box-shadow: #0405387b 5px 5px 5px;
 }
 
 .addProp, .back {
@@ -60,6 +68,11 @@ body > nav {
   border: #040538 1px solid;
   border-radius: 5px;
   margin: 10px;
+  box-shadow: #040538 5px 5px 5px;
+}
+
+.addProp:hover, .back:hover {
+  box-shadow: #0405387b 5px 5px 5px;
 }
 
 a {
@@ -85,6 +98,14 @@ button {
   background-color: #640995;
   color: white;
   border-radius: 10px;
+}
+
+.submit{
+  box-shadow: #040538 5px 5px 5px;
+}
+
+.submit:hover{
+  box-shadow: #0405387b 5px 5px 5px;
 }
 
 .info {
