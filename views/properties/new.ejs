@@ -4,6 +4,7 @@
 <a href="/properties" class="back">back</a>
 <br>
 <br>
+<div class="info">
 <form action="/properties" method="POST">
 <h3>Address</h3>
 <input type="text" name="address">
@@ -14,21 +15,22 @@
 <h3>Zip</h3>
 <input type="number" name="zip">
 <h3>Bedrooms</h3>
-<input type="number" name="bedrooms">
+<input type="number" min="1" name="bedrooms">
 <h3>Bathrooms</h3>
-<input type="number"  name="bathrooms">
+<input type="number" min="1"  name="bathrooms">
 <h3>Pets</h3>
-<input type="checkbox" name="pets">
+<input type="checkbox" name="pets" class="checkbox">
 <h3>Yard</h3>
-<input type="checkbox"  name="yard">
+<input type="checkbox"  name="yard" class="checkbox">
 <h3>Pool</h3>
-<input type="checkbox" name="pool">
+<input type="checkbox" name="pool" class="checkbox">
 <!-- <h3>Photos</h3>
 <input type="file" name="image" /> -->
 <br><br>
 <br><br>
 <button type="submit">Upload</button>
 </form>
+</div>
 
 
 <%- include('../partials/footer') %>

@@ -4,6 +4,7 @@
 <a href="/properties" class="back">back</a>
 <br>
 <br>
+<div class="info">
 <h3>Address:</h3>
 <h5><%= properties.address%></h5>
 <h5><%= properties.city%>, <%= properties.state%> <%= properties.zip%></h5>
@@ -23,9 +24,9 @@
 <input type="text" name="todoItem"><button type="submit">submit</button>
 </form>
 <ul>
-    <li>ex <%= properties.todo %></li>
+    <li>ex</li>
 </ul>
-<h5></h5>
-<!-- <a href="/properties/<%= properties._id %>/todo/new">Add TO DO</a> -->
+</div>
+
 
 <%-include('../partials/footer')%>

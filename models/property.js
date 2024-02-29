@@ -30,11 +30,11 @@ const propertySchema = new Schema({
     },
     bedrooms: {
         type: Number,
-        required: true
+        required: true,
     },
     bathrooms: {
         type: Number,
-        required: true
+        required: true,
     },
     pets: {
         type: Boolean,
@@ -45,9 +45,6 @@ const propertySchema = new Schema({
     pool: {
         type: Boolean,
     },
-    // photos: {
-        
-    // },
     todo: [todoSchema]
 });
 
