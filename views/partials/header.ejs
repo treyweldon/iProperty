@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-  <title>iProperty</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>iProperty</title>
+  </head>
 
-<body>
+  <body>
+    <nav>
+      <% if (user) { %>
+      <h1>
+        <% user %>
+        <div style="display: flex; flex-direction: column; align-items: center">
+          <img
+            style="width: 60px; height: 60px; border-radius: 100%"
+            src="<%= user.avatar %>"
+          />
+          <%= user.name %>
+        </div>
+      </h1>
 
-<nav>
-    <% if (user) { %>
-        <!-- Add What we want to render below if login -->
-
-        <h1>iProperty List</h1>
-        <!-- <a href="/profile">My Profile</a> -->
-        <a href="/properties">Properties</a>
-        <a href="/logout">Log out</a>
+      <h1>iProperty List</h1>
+      <!-- <a href="/profile">My Profile</a> -->
+      <a href="/properties">Properties</a>
+      <a href="/logout">Log out</a>
       <% } else { %>
-        <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+      <a href="/auth/google" class="login"
+        >LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"
+      /></a>
       <% } %>
-</nav>
-<body>
-
+    </nav>
+    <body></body>
+  </body>
+</html>
