@@ -143,3 +143,8 @@ footer {
   height: auto;
   width: auto;
 }
+
+#edit {
+  display: flex;
+  justify-content: end;
+}
