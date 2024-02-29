@@ -15,7 +15,7 @@
 <h5><%= property.pool ? 'Yes' : 'No' %></h5>
 <br />
 <h3>To Do:</h3>
-<form action="/todos/<%= property._id %>" method="POST">
+<div><form action="/todos/<%= property._id %>" method="POST">
   <select name="todoCategory">
     <% property.schema.path('todo').schema.path('todoCategory').enumValues.forEach(function(todoCategory) { %>
     <option value="<%= todoCategory %>"><%= todoCategory %></option>
@@ -27,7 +27,16 @@
 <ul>
   <% property.todo.forEach(todo => { %>
   <li><%= todo.todoCategory %> - <%= todo.todoItem %></li>
-  <% }); %>
 </ul>
+<form
+    action="/todos/<%= property.id %>?_method=DELETE"
+    class="delete-form"
+    ><button type="submit">🗑️</button>
+  </form> | 
+</li>
+  <br>
+  <% }); %>
+  <br>
+</div>
 
 <%- include('../partials/footer') %>

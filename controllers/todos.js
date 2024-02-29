@@ -2,6 +2,7 @@ const Property = require("../models/property");
 
 module.exports = {
   create,
+  delete: deleteTodo,
 };
 
 async function create(req, res) {
@@ -14,5 +15,10 @@ async function create(req, res) {
   };
   property.todo.push(newTodo);
   await property.save();
+  res.redirect(`/properties/${req.params.id}`);
+}
+
+async function deleteTodo(req, res) {
+  Todos.deleteOne(req.params.id);
   res.redirect(`/properties/${req.params.id}`);
 }
