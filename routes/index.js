@@ -20,7 +20,7 @@ router.get('/oauth2callback', passport.authenticate(
   'google',
   { 
     // Paths where we want to send it in case of login or fail.
-    successRedirect: '/profile',
+    successRedirect: '/properties',
     failureRedirect: '/'
   }
 ));
