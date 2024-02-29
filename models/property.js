@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const todoSchema = new Schema ({
     todoCategory: {
         type: String,
-        enum: ["Landscaping", "Housekeep", "Inspection", "Maintenance", "Other"],
+        enum: ["Landscaping", "Housekeeping", "Inspection", "Maintenance", "Other"],
         required: true
     },
     todoItem: {

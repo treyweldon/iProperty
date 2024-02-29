@@ -30,16 +30,15 @@
   <button type="submit">Submit</button>
 </form>
 <ul>
-<<<<<<< HEAD
-    <li>ex</li>
-</ul>
-</div>
-
-=======
   <% property.todo.forEach(todo => { %>
-  <li><%= todo.todoCategory %> - <%= todo.todoItem %></li>
+    <li><strong><%= todo.todoCategory %></strong> - <%= todo.todoItem %></li>
+    <form action="/properties/<%= property._id %>"  method="DELETE">
+    <button type="submit" id="delete">X</button>
+    </form>
+    <form action="/todos/<%= property._id %>"  method="POST">
+    <button type="submit" id="update">update</button>
+    </form>
   <% }); %>
 </ul>
->>>>>>> main
 
 <%- include('../partials/footer') %>

@@ -46,7 +46,6 @@ app.use(function (req, res, next) {
 });
 
 app.use('/', indexRouter);
-
 app.use('/properties', propertiesRouter);
 app.use('/todos', todosRouter);
 app.use('/profile', profileRouter);

@@ -6,7 +6,9 @@ body {
   padding: 50px;
   font-family: "Poppins", sans-serif;
   background: linear-gradient(#1e6cff, rgb(255, 255, 255));
-  height: 600px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background-repeat: no-repeat;
 }
 
@@ -36,7 +38,6 @@ body > nav {
   flex-direction: row;
   flex-wrap: wrap;
   padding: 0 50px 0 50px;
-  /* justify-content: center; */
 }
 
 .property {
@@ -50,6 +51,7 @@ body > nav {
   max-width: 20vw;
   max-height: 20vh;
   text-wrap: wrap;
+  border-radius: 10px;
 }
 
 .addProp, .back {
@@ -66,11 +68,12 @@ a {
 
 h1, h2, h3, h4, h5, li {
   color:#040538;
+  justify-content: center;
 }
 
-/* h3 {
-  margin: 5px 0 0 0;
-} */
+li {
+  padding: 5px;
+}
 
 .login, .logout {
   color: white;
@@ -88,13 +91,13 @@ button {
   padding-left: 50px;
 }
 
-input {
+input, select {
   height: 30px;
+  border-radius: 10px;
 }
 
 .login {
   display: flex;
-  justify-content: center;
   align-items: center;
   height: 45px;
 }
@@ -104,7 +107,18 @@ input {
 }
 
 footer {
-  /* display: flex; */
   color: lightgray;
+  display: flex;
   align-content: baseline;
+  justify-content: right;
+}
+
+#delete {
+  height: auto;
+  width: auto;
+}
+
+#update {
+  height: auto;
+  width: auto;
 }
