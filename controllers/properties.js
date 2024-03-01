@@ -19,8 +19,8 @@ async function updateProperty(req, res){
   req.body.pets = !!req.body.pets;
   req.body.yard = !!req.body.yard;
   req.body.pool = !!req.body.pool;
-  property = await Property.updateMany(req.body);
-  res.redirect("/properties");
+  await Property.findByIdAndUpdate(property._id, req.body);
+  res.redirect(`/properties/${property._id}`);
 }
 
 async function index(req, res) {
