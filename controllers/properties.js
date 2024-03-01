@@ -5,13 +5,22 @@ module.exports = {
   show,
   create,
   new: newProperty,
-  edit: editProperty
+  edit: editProperty,
+  update: updateProperty
 };
 
 async function editProperty(req, res){
   const property = await Property.findById(req.params.id);
   res.render('properties/edit', {property})
-  
+}
+
+async function updateProperty(req, res){
+  const property = await Property.findById(req.params.id);
+  req.body.pets = !!req.body.pets;
+  req.body.yard = !!req.body.yard;
+  req.body.pool = !!req.body.pool;
+  property = await Property.updateMany(req.body);
+  res.redirect("/properties");
 }
 
 async function index(req, res) {

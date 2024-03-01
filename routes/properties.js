@@ -8,4 +8,6 @@ router.post("/", propertiesCtrl.create);
 router.get("/:id", propertiesCtrl.show);
 router.get("/:id/edit", propertiesCtrl.edit)
 
+router.put('/:id/edit', propertiesCtrl.update)
+
 module.exports = router;
