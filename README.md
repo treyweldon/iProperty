@@ -149,6 +149,7 @@ _Below is an example of how you can instruct your audience on installing and set
 
 
 <!-- NEXT STEPS -->
+## Next Steps
 - The implementation of an Employee Database: This would allow you to document all contractors and employees used across all properties, and assign tasks from the To Do list by role or by individual.
 - Construction of a residents database that would allow you to keep information about all tennants past or present in one system: such as contact information, length of stay, and more.
 - Integration of Google Maps API to display a map on the property details page.
