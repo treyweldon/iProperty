@@ -168,9 +168,9 @@ Here are a few screenshots of our app's wireframes & styled pages.
 <summary><b>Screenshots</b></summary>
 
 ![image](/public/wireframes/Screenshot%202024-03-01%20at%209.08.34%20AM.png)
-![image](/public/Wireframes/Wireframe%20-%202.png)
-![image](/public/Wireframes/Wireframe%20-%203.png)
-![image](/public/Wireframes/Wireframe%20-%204.png)
+![image](/public/wireframes/Screenshot%202024-03-01%20at%209.11.58%20AM.png)
+![image](/public/Wireframes/Screenshot%202024-03-01%20at%209.12.24%20AM.png)
+![image](/public/Wireframes/Screenshot%202024-03-01%20at%209.12.36%20AM.png)
 </details>
 
 </br>
