@@ -3,27 +3,39 @@
 }
 
 body {
-  padding: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  padding: 40px;
   font-family: "Poppins", sans-serif;
   background: linear-gradient(#1e6cff, rgb(255, 255, 255));
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
   background-repeat: no-repeat;
   
 }
 
 body > nav {
+grid-column-start: 1;
+grid-column-end: 2;
+grid-row-start: 1;
+grid-row-end: 5;
+width: 15vw;
   background-color: #090c96;
-  display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 50px;
-  padding: 0 20px 0 30px;
-  box-shadow: #000000 5px 5px 5px;
+  padding: 20px;
   border-radius: 5px;
+  color: ivory;
 }
+.homeTitle {
+  grid-row: 1;
+  grid-column: 2;
+  justify-items: left;
 
+  color: white;
+  padding-left: 60px;
+  
+}
 .properties h3 {
   color: white;
   margin: 0 0 -5px 0;
@@ -38,15 +50,21 @@ body > nav {
 }
 
 .properties {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 0 50px 0 50px;
+  display: grid;
+justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 4;
+padding: 75px;
+margin-top: 5vh;
+margin-left: -10vw;
+width: 100%;
 }
 
 .property {
-  display: flex;
-  flex-direction: column;
+display: grid;
   align-items: center;
   text-align: center;
   margin: 20px;
@@ -63,16 +81,34 @@ body > nav {
   box-shadow: #0405387b 5px 5px 5px;
 }
 
-.addProp, .back {
-  padding: 5px;
-  background-color: white;
+.todos {
+display: grid;
+align-content: start;
+grid-row: 1 / span 2;
+grid-column-start: 2;
+width: 20vw;
+padding: 20px;
+margin: 20px;
+background-color: #5255f6;
+border-radius: 5px;
+color: white;
+
+}
+
+.navMenu, .back, .logout, .li {
+  display: grid;
+  padding: 25px;
+  background-color: rgb(37, 66, 227);
   border: #040538 1px solid;
   border-radius: 5px;
   margin: 10px;
-  box-shadow: #040538 5px 5px 5px;
+  color: white;
+  text-align: center;
+  line-height: 2em;
 }
 
-.addProp:hover, .back:hover {
+.navMenu:hover, .back:hover {
+  background-color: rgb(143, 198, 237);
   box-shadow: #0405387b 5px 5px 5px;
 }
 
@@ -80,7 +116,7 @@ a {
   color: #640995;
 }
 
-h1, h2, h3, h4, h5, li {
+h3, h4, h5,{
   color:#040538;
   justify-content: center;
 }
@@ -89,7 +125,7 @@ li {
   padding: 5px;
 }
 
-.login, .logout {
+.login {
   color: white;
 }
 
@@ -110,9 +146,15 @@ button {
 }
 
 .info {
-  padding-left: 50px;
+  display: grid;
+  position: relative;
+  grid-row: 2;
+  margin-left: 5vw;
 }
 
+#propInfo {
+  display: inline;
+}
 input, select {
   height: 30px;
   border-radius: 10px;
@@ -125,12 +167,14 @@ input, select {
 }
 
 .login img {
-  height: 20px;
+  height: 50px;
 }
 
 footer {
   color: lightgray;
-  display: flex;
+  display: grid;
+  grid-row: 4;
+  grid-column: 1 / span 4;
   align-content: baseline;
   justify-content: right;
 }
@@ -150,8 +194,6 @@ footer {
 }
 
 #edit {
-  display: flex;
-  justify-content: right;
   padding: 5px;
   background-color: white;
   border: #040538 1px solid;

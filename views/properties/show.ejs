@@ -1,46 +1,44 @@
 <%- include('../partials/header') %>
 
 <br>
-<a href="/properties" class="back">back</a>
+
 <br>
 <br>
 <div class="info" id="prop-info">
-<h3>Address:</h3>
-<h5><%= property.address %></h5>
+<h3>Address:</h3> <h5><%= property.address %></h5>
 <h5><%= property.city %>, <%= property.state %> <%= property.zip %></h5>
-<h3>Bedrooms:</h3>
-<h5><%= property.bedrooms %></h5>
-<h3>Bathrooms:</h3>
-<h5><%= property.bathrooms %></h5>
-<h3>Pets:</h3>
-<h5><%= property.pets ? 'Yes' : 'No' %></h5>
-<h3>Yard:</h3>
-<h5><%= property.yard ? 'Yes' : 'No' %></h5>
-<h3>Pool:</h3>
-<h5><%= property.pool ? 'Yes' : 'No' %></h5>
+<h3>Bedrooms:</h3> <h5><%= property.bedrooms %></h5>
+<h3>Bathrooms:</h3> <h5><%= property.bathrooms %></h5>
+<h3>Pets:</h3> <h5><%= property.pets ? 'Yes' : 'No' %></h5>
+<h3>Yard:</h3> <h5><%= property.yard ? 'Yes' : 'No' %></h5>
+<h3>Pool:</h3> <h5><%= property.pool ? 'Yes' : 'No' %></h5>
+
 <br />
 <a href="/properties/<%= property._id %>/edit" id="edit">edit details</a>
+</div>
 
-<h3>To Do:</h3>
-<form action="/todos/<%= property._id %>" method="POST">
-  <select name="todoCategory">
-    <% property.schema.path('todo').schema.path('todoCategory').enumValues.forEach(function(todoCategory) { %>
-    <option value="<%= todoCategory %>"><%= todoCategory %></option>
-    <% }); %>
-  </select>
-  - <input type="text" name="todoItem" />
-  <button type="submit" class="submit">Submit</button>
-</form>
-<ul>
-  <% property.todo.forEach(todo => { %>
-    <li>
-      <strong><%= todo.todoCategory %></strong> - <%= todo.todoItem %>
-      <form action="/todos/<%= todo._id %>?_method=DELETE"  method="POST">
-    <button type="submit" id="delete">mark complete</button>
+<div class="todos">
+  <h3>📝 Running To-Do List</h3>
+  <form action="/todos/<%= property._id %>" method="POST">
+    <select name="todoCategory">
+      <% property.schema.path('todo').schema.path('todoCategory').enumValues.forEach(function(todoCategory) { %>
+        <option value="<%= todoCategory %>"><%= todoCategory %></option>
+        <% }); %>
+      </select>
+      - <input type="text" name="todoItem" />
+      <button type="submit" class="submit">Submit</button>
     </form>
-    </li>
-
-  <% }); %>
-</ul>
-
+    <ul>
+      <% property.todo.forEach(todo => { %>
+        <li>
+          <strong><%= todo.todoCategory %></strong> - <%= todo.todoItem %>
+          <form action="/todos/<%= todo._id %>?_method=DELETE"  method="POST">
+            <button type="submit" id="delete">mark complete</button>
+          </form>
+        </li>
+        
+        <% }); %>
+      </ul>
+    </div>
+      
 <%- include('../partials/footer') %>

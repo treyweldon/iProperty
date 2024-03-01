@@ -15,17 +15,22 @@
         <% user %>
         <div style="display: flex; flex-direction: column; align-items: center">
           <img
-            style="width: 60px; height: 60px; border-radius: 100%"
+            style="width: 100px; height: 100px; border-radius: 100%"
             src="<%= user.avatar %>"
           />
+        </br>
           <%= user.name %>
         </div>
       </h1>
+    </br>
+      <h1>🏠 Dashboard</h1>
 
-      <h1>iProperty List</h1>
       <!-- <a href="/profile">My Profile</a> -->
-      <a href="/properties">Properties</a>
-      <a href="/logout">Log out</a>
+      <a href="/properties" class="navMenu"> View All Properties</a>
+      </br>
+      <a href="/properties/new" class="navMenu">Add A Property</a>
+    </br>
+      <a href="/logout" class="navMenu">Log out</a>
       <% } else { %>
       <a href="/auth/google" class="login"
         >LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"
