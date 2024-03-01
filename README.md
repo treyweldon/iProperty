@@ -4,11 +4,10 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+   
   </a>
-
-  <h3 align="center">iProperty</h3>
-
+  <h2 align="center">iProperty</h2>
+<h2>🏠🏢</h2>
   <p align="center">
 Your Property Management Dashboard<br/>
 
@@ -22,7 +21,9 @@ Your Property Management Dashboard<br/>
 
 Welcome to iProperty's project page!
 
-This was an assigned team project with a deliverable timeline of 1 week. As a team we collaborated on the user flow, functionality, and navigating through the world of Git & GitHub collaboration workflows.
+This was an assigned team project with a goal of designing and deploying a Full-Stack CRUD  application within a 1 week deliverable timeline.
+
+As a team we collaborated on the concept, user flow, functionality, and navigating through the world of Git & GitHub collaboration workflows.
 
 
 <details>
@@ -51,15 +52,7 @@ This was an assigned team project with a deliverable timeline of 1 week. As a te
 <details>
 <summary><b>Roadmap</b></summary>
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+View our Trello Board [Here](https://trello.com/b/gMpGdXkV/property-management) for our planning materials and a list of Ice Box features (and known issues).
 </details>
 </br>
 <details>
@@ -113,36 +106,18 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 
 
 
-Here's our solution for someone that manages multiple residential and commercial properties that each require a documented list of tasks needed to be completed for 
-
-
-As someone that manages or oversees the operations of multiple real-estate properties, it's easy to lose track of what needs to get done for each individual property!
-
-iProperty provides a solution by 
-
-User's MVP
-
+Here's our Admin solution for someone that manages multiple residential and commercial properties! As a Property Manager, it's easy to lose track of what needs to get done for each individual real-eastate property.
+iProperty provides a solution by presenting the portfolio of properties in a dashboard style.
 
 
 <!-- GETTING STARTED -->
 ### Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. 
-   ```
+1. Navigate to iProperty's Registration & Login page via the delpoyment link.
+   *  You'll be directed to Google's "Sign Up via Google" page 
+2. After logging in, you'll be directed to the Home dashboard where your portfolio of properties housed within our database is displayed
+3. From within the Home dashboard, you can select individual properties to view it's details and it's running list of tasks needed to be completed, add a new property to the portfolio, and manage your log in status.
+4. From within each individual property's details, you can view and manage it's list of related maintenance and to-do taks
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
