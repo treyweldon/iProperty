@@ -11,6 +11,7 @@ module.exports = {
 async function editProperty(req, res){
   const property = await Property.findById(req.params.id);
   res.render('properties/edit', {property})
+  
 }
 
 async function index(req, res) {
