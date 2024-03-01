@@ -6,44 +6,13 @@ module.exports = {
 };
 
 async function deleteTodo(req, res){
-  const propertyId = req.params.id;
-  const property = await Property.findById(propertyId);
-  property.todo.delete(newTodo);
+  const todoId = req.params.id;
+  const property = await Property.findOne({"todo._id": todoId});
+  property.todo.remove(todoId);
   await property.save();
-  res.redirect(`/properties/${req.params.id}`);
+  console.log("delete todo ", property)
+  res.redirect(`/properties/${property._id}`);
 }
-
-// async function deleteTodo(req,res){
-//   const property = await Property.findOne({'todo._id':req.params.id})
-//   property.todo.remove(req.params.id)
-//   await property.save();
-//   res.redirect(`/properties/${property._id}`);
-// }
-
-// async function deleteTodo(req, res){
-//   const property = await Property.findByIdAndDelete(req.params.id);
-//   res.redirect(`/properties/${property._id}`)
-// }
-
-// async function deleteTodo(req, res) {
-//   console.log("delete")
-// //   const property = await Property.findOne({ 'todo._id': req.params.id });
-// //   const propertyId = req.params.id;
-// //   const property = await Property.findById(propertyId);
-// //   property.todo.remove(req.params.id);
-// //   await property.save();
-//   res.redirect(`/properties/${property._id}`)
-// }
-
-// async function deleteTodo(req, res) {
-//   console.log("delete")
-// //   const property = await Property.findById(propertyId);
-// //   // const propertyId = req.params.id;
-// //   // const todoId = req.params.id;
-// //   property.todo.remove(property.schema.path('todo').schema.path('todoCategory'))
-// //   await property.save();
-//   res.redirect(`/properties/${propertyId}`);
-// }
 
 async function create(req, res) {
   const propertyId = req.params.id;

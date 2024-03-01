@@ -21,6 +21,7 @@ body > nav {
   height: 50px;
   padding: 0 20px 0 30px;
   box-shadow: #000000 5px 5px 5px;
+  border-radius: 5px;
 }
 
 .properties h3 {

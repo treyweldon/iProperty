@@ -6,16 +6,7 @@ module.exports = {
   show,
   create,
   new: newProperty,
-  delete: deleteIt
 };
-
-async function deleteIt(req, res){
-  console.log("delete it")
-  const property = await Property.findOne({'todo._id':req.params.id})
-  property.todo.remove(req.params.id)
-  await property.save();
-  res.redirect(`/properties/${property._id}`);
-}
 
 async function index(req, res) {
   const properties = await Property.find({});

@@ -3,7 +3,7 @@ var router = express.Router();
 
 const todosCtrl = require('../controllers/todos')
 
-router.delete('/', todosCtrl.delete);
+router.delete('/:id', todosCtrl.delete);
 
 router.post('/:id', todosCtrl.create);
 

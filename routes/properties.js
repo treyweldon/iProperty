@@ -12,6 +12,6 @@ router.get("/new", propertiesCtrl.new);
 router.post("/", propertiesCtrl.create);
 router.get("/:id", propertiesCtrl.show);
 
-router.delete('/', propertiesCtrl.delete)
+// router.delete('/', propertiesCtrl.delete)
 
 module.exports = router;

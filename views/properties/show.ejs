@@ -20,6 +20,7 @@
 <h5><%= property.pool ? 'Yes' : 'No' %></h5>
 <br />
 <a href="/properties/<%= property._id %>" id="edit">edit details</a>
+
 <h3>To Do:</h3>
 <form action="/todos/<%= property._id %>" method="POST">
   <select name="todoCategory">
@@ -34,7 +35,7 @@
   <% property.todo.forEach(todo => { %>
     <li>
       <strong><%= todo.todoCategory %></strong> - <%= todo.todoItem %>
-      <form action="/properties/<%= property._id %>"  method="DELETE">
+      <form action="/todos/<%= todo._id %>?_method=DELETE"  method="POST">
     <button type="submit" id="delete">X</button>
     </form>
     </li>
