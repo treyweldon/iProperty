@@ -1,4 +1,5 @@
 const Property = require("../models/property");
+const { deleteOne } = require("../models/user");
 
 module.exports = {
   index,

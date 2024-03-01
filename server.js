@@ -3,7 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+var methodOverride = require('method-override')
 var session = require('express-session');
 
 var passport = require('passport');
@@ -13,7 +13,7 @@ require('./config/database');
 require('./config/passport');
 
 var indexRouter = require('./routes/index');
-var propertiesRouter = require('./routes/properties');
+var propertiesRouter = require('./routes/properties.js');
 var todosRouter = require('./routes/todos');
 
 var app = express();
@@ -30,6 +30,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride('_method'));
 
 app.use(session({
   secret: process.env.SECRET,

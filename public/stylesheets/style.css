@@ -1,19 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(#1e6cff, rgb(255, 255, 255));
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  
+}
+
+body > nav {
+  background-color: #090c96;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50px;
+  padding: 0 20px 0 30px;
+  box-shadow: #000000 5px 5px 5px;
+  border-radius: 5px;
+}
+
+.properties h3 {
+  color: white;
+  margin: 0 0 -5px 0;
+}
+
+.propImg {
+  filter: invert();
+  max-width: 150px;
+  max-height: 120px;
+  width: 20vw;
+  height: 15vh;
+}
+
+.properties {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 50px 0 50px;
+}
+
+.property {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+  background-color: #1e6cff;
+  color: white;
+  max-width: 20vw;
+  max-height: 20vh;
+  text-wrap: wrap;
+  border-radius: 10px;
+  box-shadow: #040538 5px 5px 5px;
+}
+
+.property:hover {
+  box-shadow: #0405387b 5px 5px 5px;
+}
+
+.addProp, .back {
+  padding: 5px;
+  background-color: white;
+  border: #040538 1px solid;
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: #040538 5px 5px 5px;
+}
+
+.addProp:hover, .back:hover {
+  box-shadow: #0405387b 5px 5px 5px;
 }
 
 a {
-  color: #00B7FF;
+  color: #640995;
+}
+
+h1, h2, h3, h4, h5, li {
+  color:#040538;
+  justify-content: center;
+}
+
+li {
+  padding: 5px;
+}
+
+.login, .logout {
+  color: white;
+}
+
+button {
+  height: 30px;
+  width: 90px;
+  background-color: #640995;
+  color: white;
+  border-radius: 10px;
+}
+
+.submit{
+  box-shadow: #040538 5px 5px 5px;
+}
+
+.submit:hover{
+  box-shadow: #0405387b 5px 5px 5px;
+}
+
+.info {
+  padding-left: 50px;
+}
+
+input, select {
+  height: 30px;
+  border-radius: 10px;
 }
 
 .login {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 34px;
+  height: 45px;
 }
 
 .login img {
   height: 20px;
+}
+
+footer {
+  color: lightgray;
+  display: flex;
+  align-content: baseline;
+  justify-content: right;
+}
+
+#delete {
+  height: auto;
+  width: auto;
+}
+
+#update {
+  height: auto;
+  width: auto;
+}
+
+#edit {
+  display: flex;
+  justify-content: end;
 }

@@ -34,11 +34,11 @@ const propertySchema = new Schema({
     },
     bedrooms: {
         type: Number,
-        required: true
+        required: true,
     },
     bathrooms: {
         type: Number,
-        required: true
+        required: true,
     },
     pets: {
         type: Boolean,

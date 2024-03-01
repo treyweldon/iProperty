@@ -1,5 +1,10 @@
 <%- include('../partials/header') %>
 
+<br>
+<a href="/properties" class="back">back</a>
+<br>
+<br>
+<div class="info" id="prop-info">
 <h3>Address:</h3>
 <h5><%= property.address %></h5>
 <h5><%= property.city %>, <%= property.state %> <%= property.zip %></h5>
@@ -14,6 +19,8 @@
 <h3>Pool:</h3>
 <h5><%= property.pool ? 'Yes' : 'No' %></h5>
 <br />
+<a href="/properties/<%= property._id %>" id="edit">edit details</a>
+
 <h3>To Do:</h3>
 <form action="/todos/<%= property._id %>" method="POST">
   <select name="todoCategory">
@@ -22,11 +29,19 @@
     <% }); %>
   </select>
   - <input type="text" name="todoItem" />
-  <button type="submit">Submit</button>
+  <button type="submit" class="submit">Submit</button>
 </form>
 <ul>
   <% property.todo.forEach(todo => { %>
-  <li><%= todo.todoCategory %> - <%= todo.todoItem %></li>
+    <li>
+      <strong><%= todo.todoCategory %></strong> - <%= todo.todoItem %>
+      <form action="/todos/<%= todo._id %>?_method=DELETE"  method="POST">
+    <button type="submit" id="delete">X</button>
+    </form>
+    </li>
+    <!-- <form action="/todos/<%= property._id %>"  method="PUT">
+    <button type="submit" id="update">update</button>
+    </form> -->
   <% }); %>
 </ul>
 

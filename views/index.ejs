@@ -1,6 +1,13 @@
 <link rel='stylesheet' href='/stylesheets/style.css' />
+<div class="info">
 <h1>Welcome to iProperty</h1>
-<p>Please Registes or LogIn</p>
-<a href="/auth/google" class="login">REGISTER or LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+
+<% if (user) { %>
+    <a href="/properties">View All Properties</a>
+    <% } else { %>
+        <p>Please Register or Log In</p>
+    <a href="/auth/google" class="login">REGISTER or LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+  <% } %>
+</div>
 
 <%- include('./partials/footer') %>
