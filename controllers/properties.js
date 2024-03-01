@@ -1,12 +1,27 @@
 const Property = require("../models/property");
-const { deleteOne } = require("../models/user");
 
 module.exports = {
   index,
   show,
   create,
   new: newProperty,
+  edit: editProperty,
+  update: updateProperty
 };
+
+async function editProperty(req, res){
+  const property = await Property.findById(req.params.id);
+  res.render('properties/edit', {property})
+}
+
+async function updateProperty(req, res){
+  const property = await Property.findById(req.params.id);
+  req.body.pets = !!req.body.pets;
+  req.body.yard = !!req.body.yard;
+  req.body.pool = !!req.body.pool;
+  await Property.findByIdAndUpdate(property._id, req.body);
+  res.redirect(`/properties/${property._id}`);
+}
 
 async function index(req, res) {
   const properties = await Property.find({});

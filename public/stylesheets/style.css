@@ -140,6 +140,10 @@ footer {
   width: auto;
 }
 
+#delete:hover {
+  background-color: #360550;
+}
+
 #update {
   height: auto;
   width: auto;
@@ -147,5 +151,16 @@ footer {
 
 #edit {
   display: flex;
-  justify-content: end;
+  justify-content: right;
+  padding: 5px;
+  background-color: white;
+  border: #040538 1px solid;
+  border-radius: 5px;
+  margin: 0 0 0 50vw;
+  box-shadow: #040538 5px 5px 5px;
+  width: 80px;
+}
+
+#edit:hover {
+  box-shadow: #0405387b 5px 5px 5px;
 }
