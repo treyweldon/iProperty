@@ -19,7 +19,7 @@
 <h3>Pool:</h3>
 <h5><%= property.pool ? 'Yes' : 'No' %></h5>
 <br />
-<a href="/properties/<%= property._id %>" id="edit">edit details</a>
+<a href="/properties/<%= property._id %>/edit" id="edit">edit details</a>
 
 <h3>To Do:</h3>
 <form action="/todos/<%= property._id %>" method="POST">
@@ -39,9 +39,7 @@
     <button type="submit" id="delete">X</button>
     </form>
     </li>
-    <!-- <form action="/todos/<%= property._id %>"  method="PUT">
-    <button type="submit" id="update">update</button>
-    </form> -->
+
   <% }); %>
 </ul>
 

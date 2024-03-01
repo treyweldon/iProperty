@@ -1,12 +1,17 @@
 const Property = require("../models/property");
-const { deleteOne } = require("../models/user");
 
 module.exports = {
   index,
   show,
   create,
   new: newProperty,
+  edit: editProperty
 };
+
+async function editProperty(req, res){
+  const property = await Property.findById(req.params.id);
+  res.render('properties/edit', {property})
+}
 
 async function index(req, res) {
   const properties = await Property.find({});

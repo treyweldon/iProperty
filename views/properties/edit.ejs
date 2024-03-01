@@ -1,10 +1,32 @@
 <%- include('../partials/header') %>
-<form action="/properties/<%= property.id %>?_method=PUT" method="POST">
-  <input type="text" name="property" value="<%= property.property%>" autocomplete="off"/><br />
-  <label>
-    <input type="checkbox" name="ready" <%= property.ready ? 'checked' : ''%>>
-    Ready </label
-  ><br />
-  <button type="submit">Update Property Listing</button>
+
+<a href="/properties/<%= property._id %>" class="back">back</a>
+<br>
+<br>
+<div class="info">
+<form action="/properties/<%= property._id %>" method="POST">
+<h3>Address</h3>
+<input type="text" name="address" value="<%= property.address %>">
+<h3>City</h3>
+<input type="text" name="city" value="<%= property.city %>">
+<h3>State</h3>
+<input type="text" name="state" value="<%= property.state %>">
+<h3>Zip</h3>
+<input type="number" name="zip" value="<%= property.zip %>">
+<h3>Bedrooms</h3>
+<input type="number" min="1" name="bedrooms" value="<%= property.bedrooms %>">
+<h3>Bathrooms</h3>
+<input type="number" min="1"  name="bathrooms" value="<%= property.bathrooms %>">
+<h3>Pets</h3>
+<input type="checkbox" name="pets" class="checkbox" value="<%= property.pets %>">
+<h3>Yard</h3>
+<input type="checkbox"  name="yard" class="checkbox" value="<%= property.yard %>">
+<h3>Pool</h3>
+<input type="checkbox" name="pool" class="checkbox" value="<%= property.pool %>">
+<br><br>
+<br><br>
+<button type="submit" class="submit">Upload</button>
 </form>
+</div>
+
 <%- include('../partials/footer') -%>
