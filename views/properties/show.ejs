@@ -5,16 +5,13 @@
 <br>
 <br>
 <div class="info" id="prop-info">
-<h3>Address:</h3> <h5><%= property.address %></h5>
-<h5><%= property.city %>, <%= property.state %> <%= property.zip %></h5>
-<h3>Bedrooms:</h3> <h5><%= property.bedrooms %></h5>
-<h3>Bathrooms:</h3> <h5><%= property.bathrooms %></h5>
-<h3>Pets:</h3> <h5><%= property.pets ? 'Yes' : 'No' %></h5>
-<h3>Yard:</h3> <h5><%= property.yard ? 'Yes' : 'No' %></h5>
-<h3>Pool:</h3> <h5><%= property.pool ? 'Yes' : 'No' %></h5>
-
-<br />
-<a href="/properties/<%= property._id %>/edit" id="edit">edit details</a>
+<h3 id="label">Address:</h3> <h5><%= property.address %>, <%= property.city %>, <%= property.state %> <%= property.zip %> </h5>
+<h3 id="label">Bedrooms:</h3> <h5><%= property.bedrooms %></h5>
+<h3 id="label">Bathrooms:</h3> <h5><%= property.bathrooms %></h5>
+<h3 id="label">Pets:</h3> <h5><%= property.pets ? 'Yes' : 'No' %></h5>
+<h3 id="label">Yard:</h3> <h5><%= property.yard ? 'Yes' : 'No' %></h5>
+<h3 id="label">Pool:</h3> <h5><%= property.pool ? 'Yes' : 'No' %></h5>
+<a href="/properties/<%= property._id %>/edit" id="edit">Edit details</a>
 </div>
 
 <div class="todos">

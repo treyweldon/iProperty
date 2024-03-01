@@ -144,17 +144,29 @@ button {
 .submit:hover{
   box-shadow: #0405387b 5px 5px 5px;
 }
-
-.info {
+.propertyInfo {
   display: grid;
-  position: relative;
   grid-row: 2;
   margin-left: 5vw;
 }
 
-#propInfo {
-  display: inline;
+.info {
+  display: grid;
+  grid-row: 1;
+  margin-left: 5vw;
 }
+#label {
+  display: inline;
+  text-wrap: wrap;
+  height: 1rem;
+}
+#propInfo,{
+  display: grid;
+  grid-row: 2;
+  grid-column: 2 / span 3;
+  text-wrap: wrap;
+}
+
 input, select {
   height: 30px;
   border-radius: 10px;
@@ -194,13 +206,15 @@ footer {
 }
 
 #edit {
+grid-column: 2;
   padding: 5px;
   background-color: white;
   border: #040538 1px solid;
   border-radius: 5px;
-  margin: 0 0 0 50vw;
   box-shadow: #040538 5px 5px 5px;
-  width: 80px;
+  width: 7vw;
+  justify-self: center;
+  text-align: center;
 }
 
 #edit:hover {
