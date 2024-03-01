@@ -113,7 +113,7 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 
 
 
-Here's our solution for someone that manages multiple residential and commercial properties that each require a documented list of tasks needed to be completed for 
+Here's our solution for someone that manages multiple residential and commercial properties that each require a documented list of tasks needed to be completed. 
 
 
 As someone that manages or oversees the operations of multiple real-estate properties, it's easy to lose track of what needs to get done for each individual property!
