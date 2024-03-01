@@ -146,3 +146,35 @@ Don't forget to give the project a star! Thanks again!
 5. Open a Pull Request
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## Wireframing
+
+Here are a few screenshots of our app's wireframes & styled pages. 
+<details>
+<summary><b>Lo-Fidelity Wireframes</b></summary>
+
+![image](/public/Wireframes/Wireframe%20-%201.png)
+![image](/public/Wireframes/Wireframe%20-%202.png)
+![image](/public/Wireframes/Wireframe%20-%203.png)
+![image](/public/Wireframes/Wireframe%20-%204.png)
+</details>
+
+</br>
+<h4>Now, let's compare to our styled pages below:</h4>
+</br>
+<details>
+
+<summary><b>Screenshots</b></summary>
+
+![image](/public/wireframes/Screenshot%202024-03-01%20at%209.08.34%20AM.png)
+![image](/public/Wireframes/Wireframe%20-%202.png)
+![image](/public/Wireframes/Wireframe%20-%203.png)
+![image](/public/Wireframes/Wireframe%20-%204.png)
+</details>
+
+</br>
+</br>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<h1>🌆  🌇  🌃</h1>
