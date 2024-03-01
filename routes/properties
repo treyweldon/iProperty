@@ -5,12 +5,6 @@ const propertiesCtrl = require("../controllers/properties.js");
 router.get("/", propertiesCtrl.index);
 router.get("/new", propertiesCtrl.new);
 router.get("/:id", propertiesCtrl.show);
-
 router.post("/", propertiesCtrl.create);
-
-// router.post('/')
-
-router.delete("/:id", propertiesCtrl.delete);
-// router.put("/:id", propertiesCtrl.update);
 
 module.exports = router;
